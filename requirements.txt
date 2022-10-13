@@ -1,0 +1,11 @@
+asyncpg==0.21.0
+praw==7.1.0
+dblpy==0.4.0
+matplotlib==3.3.2
+requests==2.24.0
+aiohttp==3.6.2
+discord.py==1.5.0
+beautifulsoup4==4.9.3
+discord==1.0.1
+mysql_connector_repackaged==0.3.1
+PyGithub==1.53

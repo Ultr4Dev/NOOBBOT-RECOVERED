@@ -1,0 +1,292 @@
+{
+    "default prefix": ",",
+    "token": null,
+    "console_webhook": {
+        "url": null,
+        "token": null,
+        "id": null
+    },
+    "cogs": {
+        "mod": [
+            "purge",
+            "kick",
+            "ban",
+            "unban"
+        ],
+        "owner": [
+            "restart",
+            "vr_chat",
+            "eval",
+            "fake_send",
+            "modmail",
+            "rtfm"
+        ],
+        "test": [
+            "test",
+            "check"
+        ],
+        "fun": [
+            "inspirobot",
+            "roastme",
+            "fact"
+        ],
+        "system": [
+            "topgg",
+            "editcmd",
+            "guild_log",
+            "command_log"
+        ],
+        "info": [
+            "botinfo",
+            "helpcmd",
+            "info",
+            "ping",
+            "uptime"
+        ],
+        "utility": [
+            "suggestion",
+            "prefix",
+            "say",
+            "poll",
+            "rules",
+            "custom"
+        ]
+    },
+    "helpcmd": {
+        "mod": {
+            "description": "Used for moderation of your server, helpful when someone breaks the rules.\nAll commands requier extra permissions from the user using it.",
+            "commands": {
+                "ban": {
+                    "syntax": " <user> [reason]",
+                    "description": "Does the exact same as banning a user manually but is much easier due to not having to find the user.",
+                    "aliases": [],
+                    "sub": [],
+                    "examples": {
+                        "@Ultra#6969": "Ultra will be banned without a reason.",
+                        "@Ultra#6969 just bcs": "Ultra will be banned with 'just bcs' as reason."
+                    }
+                },
+                "unban": {
+                    "syntax": " <user> [reason]",
+                    "description": "Used to unban banned users.",
+                    "aliases": [],
+                    "sub": [],
+                    "examples": {
+                        "@Ultra#6969": "Ultra will be unbanned without a reason.",
+                        "@Ultra#6969 just bcs": "Ultra will be unbanned with 'just bcs' as reason."
+                    }
+                },
+                "kick": {
+                    "syntax": " <user> [reason]",
+                    "description": "Does the exact same as kicking a user manually but is much easier due to not having to find the user.",
+                    "aliases": [],
+                    "sub": [],
+                    "examples": {
+                        "@Ultra#6969": "Ultra will be kicked without a reason.",
+                        "@Ultra#6969 just bcs": "Ultra will be kicked with 'just bcs' as reason."
+                    }
+                },
+                "purge": {
+                    "syntax": " [user/amount] [amount/user] [text]",
+                    "description": "Used to delete chucks of messages in a chat.\nNo messages older then 2 weeks will be deleted due to api limitations.",
+                    "aliases": [
+                        "p",
+                        "delete",
+                        "del"
+                    ],
+                    "sub": [],
+                    "examples": {
+                        "": "1000 messages will be deleted.",
+                        "10": "10 messages will be deleted.",
+                        "@Ultra#6969": "1000 messages by Ultra will be deleted.",
+                        "example": "1000 messages that contain 'example' will be deleted.",
+                        "@Ultra#6969 100 example": "100 messages by Ultra that contains 'example' will be deleted."
+                    }
+                }
+            }
+        },
+        "info": {
+            "description": "Used to get information about user, server, bot, etc. Can be used to fin alt accounts and compeat about who has the oldest ac.",
+            "commands": {
+                "user_info": {
+                    "syntax": " [user]",
+                    "description": "Used to get information about a specific user. If the user argument is left empty info will be about the author instead.",
+                    "aliases": [
+                        "user-info",
+                        "userinfo",
+                        "ui",
+                        "uinfo",
+                        "u-info",
+                        "useri",
+                        "user-i"
+                    ],
+                    "sub": [],
+                    "examples": {
+                        "": "Information will be shown about command author.",
+                        "@Ultra#6969": "Information will be shown about Ultra."
+                    }
+                },
+                "server_info": {
+                    "syntax": "",
+                    "description": "Gives information about the server you are currently in.",
+                    "aliases": [
+                        "server-info",
+                        "serverinfo",
+                        "si",
+                        "sinfo",
+                        "s-info",
+                        "serveri",
+                        "server-i"
+                    ],
+                    "sub": [],
+                    "examples": {
+                        "": "Info about the server the command was used in will be shown."
+                    }
+                },
+                "decode": {
+                    "syntax": " <text>",
+                    "description": "Returns the same text but without formating.",
+                    "aliases": [],
+                    "sub": [],
+                    "examples": {
+                        " **text**": "\\**text** will be returned",
+                        " <:nb_confused:746458146188427284>": "\\<:nb_confused:746458146188427284> will be returned."
+                    }
+                }
+            }
+        },
+        "bot stuff": {
+            "description": "Get some information about the bot itself.",
+            "commands": {
+                "bot_info": {
+                    "syntax": "",
+                    "description": "Gives information about the bot.",
+                    "aliases": [
+                        "bot-info",
+                        "botinfo",
+                        "bi",
+                        "binfo",
+                        "b-info",
+                        "boti",
+                        "bot-i"
+                    ],
+                    "sub": [],
+                    "examples": {
+                        "": "Shows info about the bot."
+                    }
+                },
+                "uptime": {
+                    "syntax": "",
+                    "description": "Gives you the bots current uptime.",
+                    "aliases": [
+                        "ut"
+                    ],
+                    "sub": [],
+                    "examples": {
+                        "": "Shows for how long the bot has been online."
+                    }
+                },
+                "ping": {
+                    "syntax": "",
+                    "description": "Gives the bot's currint respons time.\nBot latency: The time it takes for the bot to answear.\nAPI latency: The time it takes for the bot to recive a message.\nDB latency: The latency to the database.",
+                    "aliases": [],
+                    "sub": [],
+                    "examples": {
+                        "": "shows the ping."
+                    }
+                },
+                "suggest": {
+                    "syntax": " <suggestion>",
+                    "description": "If you have any ideas for the bot and want to help the developers make it better.",
+                    "aliases": [
+                        "suggestion"
+                    ],
+                    "sub": [],
+                    "examples": {
+                        "make custom commands": "suggest to the devs that they should make custom commands."
+                    }
+                }
+            }
+        },
+        "utility": {
+            "description": "Commands for helping a server in other ways than moderation.",
+            "commands": {
+                "prefix": {
+                    "syntax": " [prefix]",
+                    "description": "Used to view or modify server prefix.",
+                    "aliases": [
+                        "prefixes"
+                    ],
+                    "sub": [],
+                    "examples": {
+                        "": "Get all current prefixes in the server.",
+                        "!": "Set '!' as prefix for the server."
+                    }
+                },
+                "auto_react": {
+                    "syntax": " [add/remove] [channel] [emoji]",
+                    "description": "Automaticly add reactions to all messages in specifyed channel. Can be used in poll channels.\nUse '#'' in start of message to not get reacted on.",
+                    "aliases": [
+                        "ar"
+                    ],
+                    "sub": [
+                        "add",
+                        "remove"
+                    ],
+                    "examples": {
+                        "": "view all active auto reactions.",
+                        "add #poll \u2705": "Automaticly react with \u2705 in #poll.",
+                        "add #poll \u274e": "Automaticly react with \u274e in #poll.",
+                        "remove #poll \u274e": "Stop reacting with \u274e in #poll.",
+                        "remove #poll": "Stop reacting on messages in #poll."
+                    }
+                }
+            }
+        }
+    },
+    "console_channel": null,
+    "message count": 0,
+    "command count": {
+        "jishaku cat": 8,
+        "jishaku load": 126,
+        "help": 60,
+        "jishaku py": 455,
+        "poll": 10,
+        "graph": 2,
+        "ban": 14,
+        "kick": 4,
+        "restart cogs": 84,
+        "bot_info": 64,
+        "unban": 6,
+        "jishaku": 11,
+        "purge": 57,
+        "rtfm": 47,
+        "usage": 4,
+        "jishaku source": 5,
+        "jishaku shell": 13,
+        "jishaku tasks": 1,
+        "jishaku cancel": 2,
+        "server_info": 3,
+        "user_info": 32,
+        "say": 9,
+        "testcheck": 1,
+        "prefix": 43,
+        "eval": 16,
+        "ping": 3,
+        "execute": 1,
+        "uptime": 3,
+        "wiper": 5,
+        "uno": 3,
+        "rules add": 43,
+        "rules": 3,
+        "rules remove": 10,
+        "rules edit": 4,
+        "jishaku su": 4,
+        "auto_react add": 31,
+        "auto_react": 5,
+        "restart": 2,
+        "auto_react remove": 2,
+        "rules lock": 1,
+        "rules unlock": 1
+    }
+}
